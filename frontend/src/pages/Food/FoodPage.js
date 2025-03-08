@@ -4,7 +4,7 @@ import Price from "../../components/Price/Price";
 import Tags from "../../components/Tags/Tags";
 import { getById } from "../../services/foodService";
 import classes from "./foodPage.module.css";
-import { useCart } from "../../Hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 import NotFound from "../../components/NotFound/NotFound";
 
 export default function FoodPage() {
@@ -21,18 +21,14 @@ export default function FoodPage() {
   useEffect(() => {
     getById(id).then(setFood);
   }, [id]);
-  
+
   return (
     <>
       {!food ? (
         <NotFound message="Food not found!" linkText="Back to Home page" />
       ) : (
         <div className={classes.container}>
-          <img
-            className={classes.image}
-            src={`${food.imageUrl}`}
-            alt={food.name}
-          ></img>
+          <img className={classes.image} src={`${food.imageUrl}`} alt={food.name}></img>
           <div className={classes.details}>
             <div className={classes.header}>
               <span className={classes.name}>{food.name}</span>
@@ -56,10 +52,7 @@ export default function FoodPage() {
 
             <div className={classes.tags}>
               {food.tags && (
-                <Tags
-                  tags={food.tags.map((tag) => ({ name: tag }))}
-                  forFoodPage={true}
-                />
+                <Tags tags={food.tags.map((tag) => ({ name: tag }))} forFoodPage={true} />
               )}
             </div>
 

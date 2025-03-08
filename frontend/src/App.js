@@ -2,7 +2,7 @@ import ReactSwitch from "react-switch";
 import AppRoutes from "./AppRoutes";
 import Header from "./components/Header/Header";
 import Loading from "./components/Loading/Loading";
-import { useLoading } from "./Hooks/useLoading";
+import { useLoading } from "./hooks/useLoading";
 import { setLoadingInterceptor } from "./interceptors/loadingInterceptor";
 import { createContext, useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";

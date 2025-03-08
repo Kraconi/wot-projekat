@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useAuth } from "../../../Hooks/useAuth";
+import { useAuth } from "../../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { getAllUsers } from "../../../services/userService";
 import UserList from "../../../components/UserList/UserList";

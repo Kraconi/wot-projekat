@@ -5,7 +5,7 @@ import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import Title from "../../components/Title/Title";
 import Button from "../../components/Button/Button";
-import { useAuth } from "../../Hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function RegisterPage() {
   const auth = useAuth();
@@ -74,9 +74,7 @@ export default function RegisterPage() {
             {...register("confirmPassword", {
               required: true,
               validate: (value) =>
-                value !== getValues("password")
-                  ? "Passwords Do No Match"
-                  : true,
+                value !== getValues("password") ? "Passwords Do No Match" : true,
             })}
             error={errors.confirmPassword}
           />
@@ -95,9 +93,7 @@ export default function RegisterPage() {
 
           <div className={classes.login}>
             Already a user? &nbsp;
-            <Link to={`/login${returnUrl ? "?returnUrl=" + returnUrl : ""}`}>
-              Login here
-            </Link>
+            <Link to={`/login${returnUrl ? "?returnUrl=" + returnUrl : ""}`}>Login here</Link>
           </div>
         </form>
       </div>

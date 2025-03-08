@@ -3,8 +3,7 @@ import classes from "./paymentPage.module.css";
 import { getNewOrderForCurrentUser } from "../../services/orderService";
 import Title from "../../components/Title/Title";
 import OrderItemsList from "../../components/OrderItemsList/OrderItemsList";
-import { useLoading } from "../../Hooks/useLoading";
-
+import { useLoading } from "../../hooks/useLoading";
 
 export default function PaymentPage() {
   const [order, setOrder] = useState();
@@ -31,11 +30,7 @@ export default function PaymentPage() {
               <span>{order.address}</span>
             </div>
           </div>
-          {order != undefined ? (
-            <OrderItemsList order={order} />
-          ) : (
-            showLoading()
-          )}
+          {order != undefined ? <OrderItemsList order={order} /> : showLoading()}
         </div>
 
         {/* <div className={classes.buttons_container}>

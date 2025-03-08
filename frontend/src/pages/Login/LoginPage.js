@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
-import { useAuth } from "../../Hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import classes from "./loginPage.module.css";
 import Title from "../../components/Title/Title";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import { useCart } from "../../Hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 
 export default function LoginPage() {
   const {
@@ -16,7 +16,7 @@ export default function LoginPage() {
   } = useForm();
 
   const navigate = useNavigate();
-  const {clearCart}=useCart();
+  const { clearCart } = useCart();
   const { user, login } = useAuth();
   const [params] = useSearchParams();
   const returnUrl = params.get("returnUrl");
@@ -62,9 +62,7 @@ export default function LoginPage() {
 
           <div className={classes.register}>
             New user? &nbsp;
-            <Link to={`/register?${returnUrl ? 'returnUrl=' + returnUrl:''}`}>
-              Register here
-            </Link>
+            <Link to={`/register?${returnUrl ? "returnUrl=" + returnUrl : ""}`}>Register here</Link>
           </div>
         </form>
       </div>
