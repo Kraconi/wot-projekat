@@ -4,14 +4,18 @@ import { FoodModel } from "../models/food.model.js";
 import { sample_users } from "../data.js";
 import { sample_foods } from "../data.js";
 import bcrypt from "bcryptjs";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const PASSWORD_HASH_SALT_ROUNDS = 10;
+const MONGO_URI = process.env.MONGO_URI;
 
 set("strictQuery", true);
 
 export const dbconnect = async () => {
   try {
-    connect(process.env.MONGO_URI, {
+    connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

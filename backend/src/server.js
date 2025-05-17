@@ -1,9 +1,10 @@
-import dotenv from "dotenv";
-dotenv.config({
-  path: process.env.NODE_ENV === "docker" ? ".env" : ".env.local",
-});
-import { dbconnect } from "./config/database.config.js";
+// import dotenv from "dotenv";
+// dotenv.config();
+// dotenv.config({
+//   path: process.env.NODE_ENV === "docker" ? ".env" : ".env.local",
+// });
 
+import { dbconnect } from "./config/database.config.js";
 dbconnect();
 
 import express from "express";
