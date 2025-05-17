@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useAuth } from "../../Hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { getUserById } from "../../services/userService";
 import Title from "../Title/Title";

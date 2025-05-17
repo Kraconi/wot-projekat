@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
-import { useAuth } from "../../Hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import classes from "./loginPage.module.css";
 import Title from "../../components/Title/Title";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import { useCart } from "../../Hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 
 export default function LoginPage() {
   const {

@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./header.module.css";
 import { Link } from "react-router-dom";
-import { useCart } from "../../Hooks/useCart";
-import { useAuth } from "../../Hooks/useAuth";
+import { useCart } from "../../hooks/useCart";
+import { useAuth } from "../../hooks/useAuth";
 // import Theme from "../../Theme/Theme";
 
 export default function Header({ toggle }) {

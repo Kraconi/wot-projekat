@@ -3,7 +3,7 @@ import classes from "./paymentPage.module.css";
 import { getNewOrderForCurrentUser } from "../../services/orderService";
 import Title from "../../components/Title/Title";
 import OrderItemsList from "../../components/OrderItemsList/OrderItemsList";
-import { useLoading } from "../../Hooks/useLoading";
+import { useLoading } from "../../hooks/useLoading";
 
 
 export default function PaymentPage() {

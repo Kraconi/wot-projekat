@@ -4,7 +4,7 @@ import Price from "../../components/Price/Price";
 import Tags from "../../components/Tags/Tags";
 import { getById } from "../../services/foodService";
 import classes from "./foodPage.module.css";
-import { useCart } from "../../Hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 import NotFound from "../../components/NotFound/NotFound";
 
 export default function FoodPage() {

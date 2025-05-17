@@ -1,6 +1,6 @@
 import React from "react";
-import { useCart } from "../../Hooks/useCart";
-import { useAuth } from "../../Hooks/useAuth";
+import { useCart } from "../../hooks/useCart";
+import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

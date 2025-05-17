@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./cartPage.module.css";
-import { useCart } from "../../Hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 import Title from "../../components/Title/Title";
 import { Link, useNavigate } from "react-router-dom";
 import Price from "../../components/Price/Price";
