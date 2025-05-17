@@ -6,7 +6,7 @@ import Tags from "../../components/Tags/Tags";
 import Thumbnails from "../../components/Thumbnails/Thumbnails";
 import NotFound from "../../components/NotFound/NotFound";
 
-const initialState = { foods: [] , tags: [] };
+const initialState = { foods: [], tags: [] };
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,28 +22,21 @@ const reducer = (state, action) => {
 export default function HomePage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { foods, tags } = state;
-  const { searchTerm,tag} = useParams();
+  const { searchTerm, tag } = useParams();
 
   useEffect(() => {
-    getAllTags().then(tags => dispatch({type:"TAGS_LOADED", payload:tags}));
+    getAllTags().then((tags) => dispatch({ type: "TAGS_LOADED", payload: tags }));
 
-    const loadFoods = tag
-      ? getAllByTag(tag)
-      : searchTerm
-      ? search(searchTerm)
-      : getAll();
+    const loadFoods = tag ? getAllByTag(tag) : searchTerm ? search(searchTerm) : getAll();
 
-    loadFoods.then(foods =>
-      dispatch({ type: "FOODS_LOADED", payload: foods })
-    );
+    loadFoods.then((foods) => dispatch({ type: "FOODS_LOADED", payload: foods }));
   }, [searchTerm, tag]);
 
   return (
     <>
       <Search />
-      <Tags tags={tags}/>
+      <Tags tags={tags} />
       {foods.length === 0 && <NotFound linkText="Reset Search" />}
-      {/* <p>{Array.isArray(foods) ? "Is":"Isnt"}</p> */}
       <Thumbnails foods={foods} />
     </>
   );

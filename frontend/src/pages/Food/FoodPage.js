@@ -21,18 +21,14 @@ export default function FoodPage() {
   useEffect(() => {
     getById(id).then(setFood);
   }, [id]);
-  
+
   return (
     <>
       {!food ? (
         <NotFound message="Food not found!" linkText="Back to Home page" />
       ) : (
         <div className={classes.container}>
-          <img
-            className={classes.image}
-            src={`${food.imageUrl}`}
-            alt={food.name}
-          ></img>
+          <img className={classes.image} src={`${food.imageUrl}`} alt={food.name}></img>
           <div className={classes.details}>
             <div className={classes.header}>
               <span className={classes.name}>{food.name}</span>
@@ -56,10 +52,7 @@ export default function FoodPage() {
 
             <div className={classes.tags}>
               {food.tags && (
-                <Tags
-                  tags={food.tags.map((tag) => ({ name: tag }))}
-                  forFoodPage={true}
-                />
+                <Tags tags={food.tags.map((tag) => ({ name: tag }))} forFoodPage={true} />
               )}
             </div>
 

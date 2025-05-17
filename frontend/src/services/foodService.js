@@ -33,7 +33,7 @@ export const deleteMeal = async (id) => {
 };
 
 export const addMeal = async (meal) => {
-  const fullMeal = { ...meal, imageUrl: `/foods/image-1.jpg` }; //should add image url to meal (/foods/image-1.jpg)
+  const fullMeal = { ...meal, imageUrl: `/foods/image-1.jpg` };
   const { data } = await axios.post(`api/foods/addFood`, fullMeal);
   return data;
 };

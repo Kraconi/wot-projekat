@@ -74,9 +74,7 @@ export default function RegisterPage() {
             {...register("confirmPassword", {
               required: true,
               validate: (value) =>
-                value !== getValues("password")
-                  ? "Passwords Do No Match"
-                  : true,
+                value !== getValues("password") ? "Passwords Do No Match" : true,
             })}
             error={errors.confirmPassword}
           />
@@ -95,9 +93,7 @@ export default function RegisterPage() {
 
           <div className={classes.login}>
             Already a user? &nbsp;
-            <Link to={`/login${returnUrl ? "?returnUrl=" + returnUrl : ""}`}>
-              Login here
-            </Link>
+            <Link to={`/login${returnUrl ? "?returnUrl=" + returnUrl : ""}`}>Login here</Link>
           </div>
         </form>
       </div>

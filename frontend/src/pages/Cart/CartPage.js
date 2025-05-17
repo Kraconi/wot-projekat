@@ -28,9 +28,7 @@ export default function CartPage() {
                 <div>
                   <select
                     value={item.quantity}
-                    onChange={(e) =>
-                      changeQuantity(item, Number(e.target.value))
-                    }
+                    onChange={(e) => changeQuantity(item, Number(e.target.value))}
                   >
                     <option>1</option>
                     <option>2</option>

@@ -14,7 +14,7 @@ export default function Header({ toggle }) {
       <div className={classes.container}>
         <div className={classes.titleWrapper}>
           <Link to="/" className={classes.title}>
-            PurePlate Bistro
+            PurePlate
           </Link>
         </div>
         <div className={classes.themeWrapper}>{toggle}</div>
@@ -67,9 +67,7 @@ export default function Header({ toggle }) {
                     <Link to="/cart">
                       Cart
                       {cart.totalCount > 0 && (
-                        <span className={classes.cart_count}>
-                          {cart.totalCount}
-                        </span>
+                        <span className={classes.cart_count}>{cart.totalCount}</span>
                       )}
                     </Link>
                   </li>

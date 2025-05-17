@@ -65,7 +65,7 @@ export default function AppRoutes() {
         path="/user/:id"
         element={
           <AdminRoute>
-            <UserInfo flag={false}/>
+            <UserInfo flag={false} />
           </AdminRoute>
         }
         // true is for add, false is for edit
@@ -74,7 +74,7 @@ export default function AppRoutes() {
         path="/user/add"
         element={
           <AdminRoute>
-            <UserInfo flag={true}/>
+            <UserInfo flag={true} />
           </AdminRoute>
         }
         // true is for add, false is for edit
@@ -91,7 +91,7 @@ export default function AppRoutes() {
         path="/meal/add"
         element={
           <AdminRoute>
-            <MealInfo add={true}/>
+            <MealInfo add={true} />
           </AdminRoute>
         }
       />

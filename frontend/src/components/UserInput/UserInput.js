@@ -7,8 +7,7 @@ import Title from "../Title/Title";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import { toast } from "react-toastify";
-import './UserInput.css'; // Adjust the path according to your folder structure
-
+import "./UserInput.css"; // Adjust the path according to your folder structure
 
 export default function UserInput({ flag }) {
   const { id } = useParams();
@@ -202,5 +201,4 @@ export default function UserInput({ flag }) {
       ) : null}
     </div>
   );
-  
 }
